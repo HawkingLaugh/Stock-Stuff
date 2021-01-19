@@ -6,6 +6,9 @@ import time
 
 # to turn the plt into interactive mode for updating 
 plt.ion()
+plt.title('MYM=F')
+plt.xlabel('Time')
+plt.ylabel('Price')
 while True:
     try:
         while True:
