@@ -24,7 +24,7 @@ while True:
             plt.show(block=False)
             plt.pause(1)
             process = psutil.Process(os.getpid())
-            print(process.memory_info().rss / 1024 ** 2)
+            print("{} MB".format(process.memory_info().rss / 1024 ** 2))
             time.sleep(30)
     except :
         print("Error")
