@@ -19,13 +19,14 @@ while True:
             d3raw.to_csv('MYM=F.csv', header=False, index=True,mode='a')
             d4 = data.tail(30)['Open']
             print(d2)
+            
             line = d4.plot(x = 'Datetime', y = 'Open')
             # plt.annotate('Current', line)
             plt.show(block=False)
             plt.pause(1)
             process = psutil.Process(os.getpid())
             print("{} MB".format(process.memory_info().rss / 1024 ** 2))
-            time.sleep(30)
+            time.sleep(60)
     except :
         print("Error")
         time.sleep(600)
