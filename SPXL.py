@@ -16,7 +16,7 @@ while True:
             d2 = data.tail(5)
             d3raw = data.tail(1)
             d3raw.to_csv('SPXL.csv', header=False, index=True, mode='a')
-            d4 = data.tail(30)['Open']
+            d4 = data.tail(10)['Open']
             print(d2)
             line = d4.plot(x = 'Datetime', y = 'Open')
             # plt.annotate('Current', line)
